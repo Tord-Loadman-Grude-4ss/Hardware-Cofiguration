@@ -1,0 +1,177 @@
+
+[NPort Configuration File]
+CheckCode=cfg2
+
+[Basic Information (not changeable)]
+APID=0x80015200
+HWID=0x523A
+Serial No=7837
+MAC Address=00:90:E8:D8:EF:DE
+Firmware version=0x1070000
+
+[Basic Settings]
+Server Name=OS-12
+Time Zone=0
+Time Zone index=23
+Date_Year=125
+Date_Month=9
+Date_Day=7
+Time_Hour=7
+Time_Minute=12
+Time_Second=1
+Time_Milliseconds=0
+Time Server=
+Console Enabled=285
+Moxa Service Encrypt Version=0
+HTTP Session=6
+Auto Logout=5
+TLS Mininum Version=3
+HTTP Advanced Setting=0
+
+[Network Settings]
+IP Address=10.149.12.172
+Netmask=255.255.255.128
+Gateway=
+IP Configuration=0
+DNS Server 1=
+DNS Server 2=
+
+[SNMP]
+Enable SNMP=0
+Community=public
+Write Community=private
+Location=
+Contact=
+Operation Mode=0
+Trap=
+Trap Send Mode=0
+Trap Community=public
+
+[LLDP]
+Enable LLDP=1
+Message Transmit Interval=30
+
+[Mail]
+Mail Server=
+Mail Server Login=0
+User Name=
+Password=
+From Address=NP5230A_7837@NP5230A
+To Address1=
+To Address2=
+To Address3=
+To Address4=
+
+[Accessible IP List]
+Enabled=0
+PlusEnabled=0
+Rule1=0,,
+Rule2=0,,
+Rule3=0,,
+Rule4=0,,
+Rule5=0,,
+Rule6=0,,
+Rule7=0,,
+Rule8=0,,
+Rule9=0,,
+Rule10=0,,
+Rule11=0,,
+Rule12=0,,
+Rule13=0,,
+Rule14=0,,
+Rule15=0,,
+Rule16=0,,
+
+[Serial]
+Port1=4800,3,1,1,2,
+Port2=4800,3,1,1,2,
+
+[Operating Mode]
+Port1=14
+Port2=14
+
+[Operating Mode Option 2]
+Port1=16,0x00,0x00,500,150
+Port2=16,0x00,0x00,500,150
+
+[Operating Mode Option 1]
+Port1=4019,10.149.12.131,10.149.12.131,4019,10.149.12.222,10.149.12.223,4019,,,4001,,,4001
+Port2=4020,10.149.12.131,10.149.12.131,4020,10.149.12.222,10.149.12.223,4020,,,0,,,0
+
+[Notification Message]
+Login Message=
+Login Authentication Failure Message=Login Failed
+
+[User Settings]
+User Enable1=1
+User Enable2=0
+User Enable3=0
+User Enable4=0
+User Enable5=0
+User Enable6=0
+User Account1=admin
+User Account2=
+User Account3=
+User Account4=
+User Account5=
+User Account6=
+User Pass1=Wims.admin1..
+User Pass2=
+User Pass3=
+User Pass4=
+User Pass5=
+User Pass6=
+User Group1=0
+User Group2=1
+User Group3=1
+User Group4=1
+User Group5=1
+User Group6=1
+
+[Password Login Policy]
+Password Minimum Length=4
+Password Complexity Strength Check=0
+At Least One Digit=0
+Mixed Upper And Lower Case Letters=0
+At Least One Special Character=0
+Password Lifetime=0
+Account Login Failure Lockout=0
+Retry Failure Threshold=5
+Lockout Time=5
+
+[System Log Settings]
+Log System=0
+Log Network=0
+Log Config=0
+Log OpMode=0
+Remote Log System=0
+Remote Log Network=0
+Remote Log Config=0
+Remote Log OpMode=0
+
+[Remote Log Server]
+SYSLOG Server=
+SYSLOG Facility=0
+SYSLOG Severity=0
+
+[Event Log Settings]
+Event Log Capacity Warning=0
+Warning at=0
+Event log oversize action=0
+
+[Auto Warning]
+Mail=0x0
+Trap=0x0
+
+[Port Auto Warning]
+Port1=0x00,0x00
+Port2=0x00,0x00
+
+[IP Address Report]
+Server=
+Port=4002
+Period=10
+
+[Password]
+Password=Wims.admin1..
+LCM & Reset Protect=0
