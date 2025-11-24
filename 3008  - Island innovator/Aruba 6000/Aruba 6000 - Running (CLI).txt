@@ -1,0 +1,137 @@
+
+Current configuration:
+!
+!Version ArubaOS-CX PL.10.11.1011
+!export-password: default
+
+
+user admin group administrators password ciphertext AQBapVeZyodY+2tHdloDYF3USMXJ    wsCd1I2MKFHmMuFSbBWNYgAAAKl0QbTlGlU/Zv9pYIbit4F+flN2srL8FiJITxyzkIltRsFwK3TZkCZN    imAc/yqtBIdl5PdMQvtCaPaz1myBACsiM1ZCAZxHWZ0kGA4kc+vRXJeJ6bCpHHb7XNECBCjy1bHI
+ntp server pool.ntp.org minpoll 4 maxpoll 4 iburst
+ntp enable
+!
+!
+!
+!
+!
+!
+ssh server vrf default
+access-list ip deny-inet-133
+    10 deny any 192.168.111.0/255.255.255.0 10.75.72.32/255.255.255.240
+    20 permit any any any
+client track ip
+no client track ip update-method probe
+vlan 1
+    client track ip
+vlan 133
+    client track ip
+    apply access-list ip deny-inet-133 in
+vlan 134
+    client track ip
+vlan 211
+spanning-tree
+spanning-tree priority 2
+spanning-tree config-name 0c:97:5f:44:76:c0
+interface 1/1/1
+    no shutdown
+    vlan access 133
+interface 1/1/2
+    no shutdown
+    vlan access 133
+interface 1/1/3
+    no shutdown
+    vlan access 133
+interface 1/1/4
+    no shutdown
+    vlan access 133
+interface 1/1/5
+    no shutdown
+    vlan access 133
+interface 1/1/6
+    no shutdown
+    vlan access 133
+interface 1/1/7
+    no shutdown
+    vlan access 134
+interface 1/1/8
+    no shutdown
+    vlan access 134
+interface 1/1/9
+    no shutdown
+    vlan access 133
+interface 1/1/10
+    no shutdown
+    vlan access 134
+interface 1/1/11
+    no shutdown
+    vlan access 133
+interface 1/1/12
+    no shutdown
+    vlan trunk native 134
+    vlan trunk allowed 134,211
+interface 1/1/13
+    no shutdown
+    vlan access 134
+interface 1/1/14
+    no shutdown
+    vlan access 134
+interface 1/1/15
+    no shutdown
+    vlan access 133
+interface 1/1/16
+    no shutdown
+    vlan access 133
+interface 1/1/17
+    no shutdown
+    vlan access 133
+interface 1/1/18
+    no shutdown
+    vlan access 133
+interface 1/1/19
+    no shutdown
+    vlan access 133
+interface 1/1/20
+    no shutdown
+    vlan access 133
+interface 1/1/21
+    no shutdown
+    vlan access 134
+interface 1/1/22
+    no shutdown
+    vlan access 134
+interface 1/1/23
+    no shutdown
+    vlan access 133
+interface 1/1/24
+    no shutdown
+    vlan access 133
+interface 1/1/25
+    no shutdown
+    vlan access 133
+interface 1/1/26
+    no shutdown
+    vlan access 133
+interface 1/1/27
+    no shutdown
+    vlan access 133
+interface 1/1/28
+    no shutdown
+    vlan access 133
+interface vlan 1
+    no ip dhcp
+interface vlan 133
+    ip address 192.168.111.10/24
+interface vlan 134
+    ip address 13.37.99.1/24
+interface vlan 211
+    ip address 10.72.75.46/28
+snmp-server vrf default
+snmp-server community private
+    access-level rw
+snmp-server community public
+ip route 0.0.0.0/0 10.72.75.33
+!
+!
+!
+!
+!
+https-server vrf default
